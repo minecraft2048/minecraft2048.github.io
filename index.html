@@ -1,23 +1,297 @@
----
-layout: default
----
 
-<div class="home">
 
-  <h1 class="page-heading">Posts</h1>
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Guide on using Automated Payload TT&amp;C demo system &mdash; Automated Payload TT&amp;C  documentation</title>
+  
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="#" class="icon icon-home"> Automated Payload TT&C
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Guide on using Automated Payload TT&amp;C demo system</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a></li>
+<li><a class="reference internal" href="#getting-access-to-the-demo-website">Getting access to the demo website</a></li>
+<li><a class="reference internal" href="#scheduling-a-new-experiment">Scheduling a new experiment</a></li>
+<li><a class="reference internal" href="#monitoring-experiment-progress">Monitoring experiment progress</a></li>
+<li><a class="reference internal" href="#retrieving-and-analysing-data-from-experiment">Retrieving and analysing data from experiment</a></li>
+<li><a class="reference internal" href="#controlling-the-simulator">Controlling the simulator</a></li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Automated Payload TT&C</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Guide on using Automated Payload TT&amp;C demo system</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
       </li>
-    {% endfor %}
+    
   </ul>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+  
+  <hr/>
 </div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="guide-on-using-automated-payload-tt-c-demo-system">
+<h1>Guide on using Automated Payload TT&amp;C demo system<a class="headerlink" href="#guide-on-using-automated-payload-tt-c-demo-system" title="Permalink to this headline">¶</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This page is under development. The instructions here are enough to use this demo system to
+schedule an experiment, however more functions will be implemented in the future.</p>
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>This documentation will guide you on using Automated Payload TT&amp;C application at <a class="reference external" href="http://harrygs-demo.ddns.net:8050/">http://harrygs-demo.ddns.net:8050/</a> to
+schedule a real GNSS reflectometry experiment on a test satellite setup on ACSER. The workflow will be this:</p>
+<ul class="simple">
+<li><p>Get access to the website</p></li>
+<li><p>Schedule a new experiment</p></li>
+<li><p>Check for experiment progress</p></li>
+<li><p>View the result of the experiment</p></li>
+</ul>
+</div>
+<div class="section" id="getting-access-to-the-demo-website">
+<h2>Getting access to the demo website<a class="headerlink" href="#getting-access-to-the-demo-website" title="Permalink to this headline">¶</a></h2>
+<p>Please contact <a class="reference external" href="mailto:opensource&#46;acser&#37;&#52;&#48;gmail&#46;com">opensource<span>&#46;</span>acser<span>&#64;</span>gmail<span>&#46;</span>com</a> to get the login details to access the demo website. After getting the username and password,
+log into <a class="reference external" href="http://harrygs-demo.ddns.net:8050/">http://harrygs-demo.ddns.net:8050/</a> with the provided username and password. You will be brought into Automated Payload TT&amp;C homepage:</p>
+<a class="reference internal image-reference" href="_images/homepage.png"><img alt="Automated Payload TT&amp;C homepage" src="_images/homepage.png" style="width: 600px;" /></a>
+<p>You can go back to this homepage from anywhere in this web app by clicking <code class="docutils literal notranslate"><span class="pre">Automated</span> <span class="pre">TT&amp;C</span></code> name on the top left or by clicking <code class="docutils literal notranslate"><span class="pre">Experiment</span>
+<span class="pre">schedules</span></code> on the navigation bar.</p>
+</div>
+<div class="section" id="scheduling-a-new-experiment">
+<h2>Scheduling a new experiment<a class="headerlink" href="#scheduling-a-new-experiment" title="Permalink to this headline">¶</a></h2>
+<p>You will see <code class="docutils literal notranslate"><span class="pre">Schedule</span> <span class="pre">new</span> <span class="pre">experiment</span></code> section on the homepage, which contains 3 entry fields:</p>
+<ul class="simple">
+<li><p>Optional experiment name</p></li>
+<li><p>Start time</p></li>
+<li><p>Stop time</p></li>
+</ul>
+<p>Fill in the desired experiment start time and stop time in <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601 with timezone</a> format, such as
+<code class="docutils literal notranslate"><span class="pre">2021-05-11T06:06:01+00:00</span></code> Example entry is below:</p>
+<a class="reference internal image-reference" href="_images/topbar_filled.png"><img alt="Example of schedule new experiment" src="_images/topbar_filled.png" style="width: 1000px;" /></a>
+<p>Then, you can fill in your desired experiment name, or leave it empty to use autogenerated experiment
+name based on the experiment start time. For example, if your start time is <code class="docutils literal notranslate"><span class="pre">2021-05-11T06:06:01+00:00</span></code>,
+then the system will automatically set the experiment name to <code class="docutils literal notranslate"><span class="pre">ddm_20210511_060601</span></code>.</p>
+<p>Now, the experiment is scheduled on the ground station, but not yet sent to the satellite yet. To see the scheduled experiments,
+click on the Filter by experiment status dropdown and select Pending.</p>
+<a class="reference internal image-reference" href="_images/pending11.png"><img alt="_images/pending11.png" src="_images/pending11.png" style="width: 1000px;" /></a>
+<p>You can delete all the pending experiments by clicking Delete all pending experiments button.</p>
+<p>When you’re satisfied with your experiment schedules, click on Upload to Satellite button. The system will then
+generate schedules in KubOS scheduler format, and upload it to the simulated satellite on the next pass. It will then show
+up as <code class="docutils literal notranslate"><span class="pre">SCHEDULED</span></code> in the Last status column.</p>
+<a class="reference internal image-reference" href="_images/ss1.png"><img alt="_images/ss1.png" src="_images/ss1.png" style="width: 1000px;" /></a>
+</div>
+<div class="section" id="monitoring-experiment-progress">
+<h2>Monitoring experiment progress<a class="headerlink" href="#monitoring-experiment-progress" title="Permalink to this headline">¶</a></h2>
+<p>To monitor your experiment, click on Experiment logs button on the table. It will bring you to a page showing
+the history of events for your scheduled experiment, and check if any errors has happened.</p>
+<a class="reference internal image-reference" href="_images/ss2.png"><img alt="_images/ss2.png" src="_images/ss2.png" style="width: 1000px;" /></a>
+<p>Most of the time, the system onboard the (simulated) satellite will automatically recover from any faults without any intervention
+from ground station.</p>
+</div>
+<div class="section" id="retrieving-and-analysing-data-from-experiment">
+<h2>Retrieving and analysing data from experiment<a class="headerlink" href="#retrieving-and-analysing-data-from-experiment" title="Permalink to this headline">¶</a></h2>
+<p>After the experiment has finished, the system will automatically download the experiment. To view the downloaded data,
+click on <code class="docutils literal notranslate"><span class="pre">View</span> <span class="pre">DDM</span></code> button. It will bring you to another web page. Then, click on the <code class="docutils literal notranslate"><span class="pre">View</span> <span class="pre">DDMs</span></code> button.</p>
+<a class="reference internal image-reference" href="_images/ss4.png"><img alt="_images/ss4.png" src="_images/ss4.png" style="width: 1000px;" /></a>
+<p>There are 3 sections in this page:</p>
+<ul class="simple">
+<li><p>World map that shows the GNSS signal reflection points. It is color coded with the SNR of the reflected signal</p></li>
+<li><p>Histogram of the reflected signal SNR</p></li>
+<li><p>DDM plots</p></li>
+</ul>
+<p>Drag the world map to pan it around, and use scroll wheel to zoom. Then, hover over one of points on the world map. The DDM plots corresponding
+to the point will be displayed on the bottom on the screen, where you can scroll down to see all of it.</p>
+<a class="reference internal image-reference" href="_images/ss5.png"><img alt="_images/ss5.png" src="_images/ss5.png" style="width: 1000px;" /></a>
+<p>To download the data, click the <code class="docutils literal notranslate"><span class="pre">Download</span> <span class="pre">DDM</span></code> dropdown menu. You can select file type from the menu. Both of them are in SQLite
+format, which can be viewed using <a class="reference external" href="https://sqlitebrowser.org/">DB Browser for SQLite</a></p>
+</div>
+<div class="section" id="controlling-the-simulator">
+<h2>Controlling the simulator<a class="headerlink" href="#controlling-the-simulator" title="Permalink to this headline">¶</a></h2>
+<p>Click on <code class="docutils literal notranslate"><span class="pre">Simulator</span> <span class="pre">control</span></code> on the nav bar. This will bring you to a web application that controls a service in the ground station computer
+that simulates satellite passes. There are 3 sections:</p>
+<ul class="simple">
+<li><p>Simulated pass information</p></li>
+<li><p>Simulation parameters</p></li>
+<li><p>Simulation controls</p></li>
+</ul>
+<p>To simulate a pass, click on <code class="docutils literal notranslate"><span class="pre">Skip</span> <span class="pre">to</span> <span class="pre">next</span> <span class="pre">pass/AOS</span></code>. To simulate a LOS event, click on <code class="docutils literal notranslate"><span class="pre">Skip</span> <span class="pre">to</span> <span class="pre">next</span> <span class="pre">LOS</span></code>. To reset the simulation,
+click on <code class="docutils literal notranslate"><span class="pre">Reset</span> <span class="pre">simulation</span></code>, where the simulator will go back to real time and start its pass window from there.</p>
+<p>To bypass the simulator, click on <code class="docutils literal notranslate"><span class="pre">Enable</span> <span class="pre">always</span> <span class="pre">pass</span></code>, where the simulator will say that the satellite is always in pass. Disable this
+by clicking <code class="docutils literal notranslate"><span class="pre">Disable</span> <span class="pre">always</span> <span class="pre">pass</span></code>, where the simulator will then simulate intermittent connectivity to the simulated satellite.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, ACSER.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
